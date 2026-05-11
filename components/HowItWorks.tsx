@@ -7,9 +7,8 @@ export function HowItWorks() {
           <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-ink-900 md:text-5xl">
             저장은 데스크톱, <span className="text-gradient">학습은 손 안에서.</span>
           </h2>
-          <p className="mt-4 text-ink-600 md:text-lg">
-            세 가지 플랫폼이 하나의 클라우드로 매끄럽게 이어집니다.
-            발견부터 완전한 습득까지, 단 세 걸음.
+          <p className="mt-4 text-ink-600 md:whitespace-nowrap md:text-lg">
+            세 가지 플랫폼이 하나의 클라우드로 매끄럽게 이어집니다. 발견부터 완전한 습득까지, 단 세 걸음.
           </p>
         </div>
 

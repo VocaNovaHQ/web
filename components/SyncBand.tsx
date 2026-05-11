@@ -21,12 +21,14 @@ export function SyncBand() {
               <h2 className="mt-5 text-3xl font-extrabold tracking-tight md:text-5xl">
                 하나의 계정,
                 <br />
-                <span className="text-blue-200">세 개의 기기.</span>
+                <span className="text-blue-200">세 개의 플랫폼.</span>
               </h2>
               <p className="mt-5 max-w-xl text-blue-100/90 md:text-lg">
                 Google 또는 Apple 로그인 한 번으로 충분합니다. 맥에서 저장한
-                단어가 아이폰에서, 크롬에서 본 예문이 맥북에서 즉시 보입니다.
-                Supabase 클라우드가 모든 변경을 실시간으로 이어 줍니다.
+                단어가 아이폰에서 바로 동기화되고, 크롬에서 저장한 단어와 그
+                문장이 함께 예문으로 기록되어 앱에서도 즉시 이어서 학습할 수
+                있습니다. Supabase 클라우드가 모든 변경을 실시간으로 연결해
+                줍니다.
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-3">

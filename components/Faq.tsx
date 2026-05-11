@@ -40,6 +40,7 @@ export function Faq() {
           {faqs.map((f, i) => (
             <details
               key={f.q}
+              name="faq"
               className="group px-6 py-5 [&_summary::-webkit-details-marker]:hidden"
               open={i === 0}
             >
@@ -47,13 +48,14 @@ export function Faq() {
                 <span className="text-[15px] font-semibold text-ink-900 md:text-base">
                   {f.q}
                 </span>
-                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-pill bg-ink-50 text-ink-600 transition group-open:rotate-45 group-open:bg-chip group-open:text-blue-700">
+                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-pill bg-ink-50 text-ink-600 transition group-open:rotate-180 group-open:bg-chip group-open:text-blue-700">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
                     <path
-                      d="M12 5v14M5 12h14"
+                      d="M6 9l6 6 6-6"
                       stroke="currentColor"
                       strokeWidth="2.2"
                       strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </span>

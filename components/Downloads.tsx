@@ -20,8 +20,9 @@ const platforms: Platform[] = [
     description:
       "웹에서 영단어를 드래그하면 즉시 사전 팝업이 뜨고, 한 번의 클릭으로 클라우드에 저장됩니다.",
     badge: "Chrome Web Store",
-    available: false,
-    cta: "곧 출시",
+    available: true,
+    href: "https://chromewebstore.google.com/detail/vocanova/kfgjfccpggcdbcjipgmmmkbklidieflb?pli=1",
+    cta: "Chrome 웹 스토어에서 받기",
     bullets: [
       "더블클릭 / 드래그 선택 캡처",
       "섀도우 DOM 기반 깔끔한 팝업",
@@ -159,7 +160,12 @@ function DownloadCard({ platform }: { platform: Platform }) {
 
         <div className="mt-7">
           {platform.available && platform.href ? (
-            <a href={platform.href} className="btn-primary w-full">
+            <a
+              href={platform.href}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-primary w-full"
+            >
               {platform.cta}
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
                 <path
