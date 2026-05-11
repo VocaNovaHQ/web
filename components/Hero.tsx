@@ -29,9 +29,9 @@ export function Hero() {
               className="mt-6 max-w-xl text-base leading-relaxed text-ink-600 md:text-lg animate-fadeUp"
               style={{ animationDelay: "120ms" }}
             >
-              브라우저에서 만난 영단어를 한 번의 클릭으로 저장하고,
-              모바일에서는 스마트한 복습 알고리즘으로 완전히 내 것으로 만듭니다.
-              데스크톱에서 수집하고, 손 안에서 학습하세요.
+              브라우저와 컴퓨터 어디에서든 모르는 영단어를 한 번의 클릭과
+              단축키로 저장하고, 모바일에서는 스마트한 복습 알고리즘으로 완전히
+              내 것으로 만듭니다. 데스크톱에서 수집하고, 손 안에서 학습하세요.
             </p>
 
             <div
@@ -39,8 +39,14 @@ export function Hero() {
               style={{ animationDelay: "180ms" }}
             >
               <a href="#downloads" className="btn-primary">
-                무료로 시작하기
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
+                지금 시작하기
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden
+                >
                   <path
                     d="M5 12h14M13 6l6 6-6 6"
                     stroke="currentColor"
@@ -71,7 +77,10 @@ export function Hero() {
             className="relative lg:col-span-5 animate-fadeUp"
             style={{ animationDelay: "300ms" }}
           >
-            <div className="absolute -inset-10 -z-10 bg-hero-glow" aria-hidden />
+            <div
+              className="absolute -inset-10 -z-10 bg-hero-glow"
+              aria-hidden
+            />
             <WordCardPreview />
           </div>
         </div>

@@ -10,14 +10,15 @@ export function HowItWorks() {
             <span className="text-gradient">학습은 손 안에서</span>
           </h2>
           <p className="mt-4 text-ink-600 md:text-lg lg:whitespace-nowrap">
-            세 가지 플랫폼이 하나의 클라우드로 매끄럽게 이어집니다. 발견부터 완전한 습득까지, 단 세 걸음.
+            세 가지 플랫폼이 하나의 클라우드로 매끄럽게 이어집니다. 발견부터
+            완전한 습득까지, 단 세 걸음.
           </p>
         </div>
 
         <ol className="mt-14 grid gap-6 md:grid-cols-3">
           <Step
             n="01"
-            title="만나면 바로 캡처"
+            title="만나면 바로 조회"
             body={
               <>
                 웹에서 모르는 단어를 만나면 더블클릭, 맥에서는{" "}

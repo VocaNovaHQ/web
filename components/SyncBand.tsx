@@ -25,10 +25,8 @@ export function SyncBand() {
               </h2>
               <p className="mt-5 max-w-xl text-blue-100/90 md:text-lg">
                 Google 또는 Apple 로그인 한 번으로 충분합니다. 맥에서 저장한
-                단어가 아이폰에서 바로 동기화되고, 크롬에서 저장한 단어와 그
-                문장이 함께 예문으로 기록되어 앱에서도 즉시 이어서 학습할 수
-                있습니다. Supabase 클라우드가 모든 변경을 실시간으로 연결해
-                줍니다.
+                단어가 아이폰에 바로 동기화되고, 크롬에서 저장한 단어와 그
+                문장이 함께 예문으로 기록되어 앱에서 학습할 수 있습니다.
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-3">
@@ -77,13 +75,23 @@ function SyncDiagram() {
             />
           </svg>
         </div>
-        <div className="mt-2 text-sm font-bold text-ink-900">VocaNova Cloud</div>
+        <div className="mt-2 text-sm font-bold text-ink-900">
+          VocaNova Cloud
+        </div>
         <div className="text-xs text-ink-500">실시간 동기화</div>
       </div>
 
       {/* nodes */}
-      <DiagramNode label="Chrome" sub="확장 프로그램" pos="top-3 left-3 sm:top-2 sm:left-2" />
-      <DiagramNode label="macOS" sub="메뉴바 앱" pos="top-3 right-3 sm:top-2 sm:right-2" />
+      <DiagramNode
+        label="Chrome"
+        sub="확장 프로그램"
+        pos="top-3 left-3 sm:top-2 sm:left-2"
+      />
+      <DiagramNode
+        label="macOS"
+        sub="메뉴바 앱"
+        pos="top-3 right-3 sm:top-2 sm:right-2"
+      />
       <DiagramNode
         label="iOS"
         sub="학습 앱"
