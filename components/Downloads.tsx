@@ -72,7 +72,7 @@ const platforms: Platform[] = [
     bullets: [
       "스마트 복습 (SRS)",
       "플래시카드 + 음성 재생",
-      "홈 화면 위젯 · 알림",
+      "스트릭 · 학습 통계",
     ],
     gradient: "from-emerald-400 via-green-500 to-emerald-600",
     icon: <PlayStoreIcon />,
