@@ -4,10 +4,12 @@ export function HowItWorks() {
       <div className="container-x">
         <div className="mx-auto max-w-2xl text-center">
           <span className="eyebrow">사용 방법</span>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-ink-900 md:text-5xl">
-            저장은 데스크톱, <span className="text-gradient">학습은 손 안에서.</span>
+          <h2 className="mt-4 text-3xl font-extrabold leading-[1.15] tracking-tight text-ink-900 md:text-5xl">
+            저장은 데스크톱,
+            <br />
+            <span className="text-gradient">학습은 손 안에서</span>
           </h2>
-          <p className="mt-4 text-ink-600 md:whitespace-nowrap md:text-lg">
+          <p className="mt-4 text-ink-600 md:text-lg lg:whitespace-nowrap">
             세 가지 플랫폼이 하나의 클라우드로 매끄럽게 이어집니다. 발견부터 완전한 습득까지, 단 세 걸음.
           </p>
         </div>
@@ -15,7 +17,6 @@ export function HowItWorks() {
         <ol className="mt-14 grid gap-6 md:grid-cols-3">
           <Step
             n="01"
-            badge="Chrome · macOS"
             title="만나면 바로 캡처"
             body={
               <>
@@ -40,7 +41,6 @@ export function HowItWorks() {
           />
           <Step
             n="02"
-            badge="One-Click Save"
             title="클라우드에 저장"
             body={
               <>
@@ -67,7 +67,6 @@ export function HowItWorks() {
           />
           <Step
             n="03"
-            badge="iOS"
             title="스마트 복습"
             body={
               <>
@@ -93,14 +92,12 @@ export function HowItWorks() {
 
 function Step({
   n,
-  badge,
   title,
   body,
   accent,
   icon,
 }: {
   n: string;
-  badge: string;
   title: string;
   body: React.ReactNode;
   accent: string;
@@ -108,21 +105,20 @@ function Step({
 }) {
   return (
     <li className="card relative p-7">
-      <div className="flex items-center justify-between">
-        <div
-          className={`inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br ${accent} text-white shadow-glow`}
-        >
-          {icon}
+      <div className="flex items-center justify-between gap-3">
+        <div className="flex min-w-0 items-center gap-3">
+          <div
+            className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${accent} text-white shadow-glow`}
+          >
+            {icon}
+          </div>
+          <h3 className="truncate text-xl font-bold text-ink-900">{title}</h3>
         </div>
-        <span className="text-xs font-bold tracking-wider text-ink-400">
+        <span className="shrink-0 text-xs font-bold tracking-wider text-ink-400">
           {n}
         </span>
       </div>
-      <div className="mt-5 inline-flex items-center gap-1.5 rounded-pill bg-chip px-2.5 py-1 text-[11px] font-semibold text-blue-700">
-        {badge}
-      </div>
-      <h3 className="mt-3 text-xl font-bold text-ink-900">{title}</h3>
-      <p className="mt-2 text-[15px] leading-relaxed text-ink-600">{body}</p>
+      <p className="mt-4 text-[15px] leading-relaxed text-ink-600">{body}</p>
     </li>
   );
 }

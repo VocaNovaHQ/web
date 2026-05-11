@@ -13,31 +13,33 @@ export function Footer() {
             </p>
           </div>
 
-          <FooterCol
-            title="제품"
-            links={[
-              { label: "기능", href: "#features" },
-              { label: "사용 방법", href: "#how" },
-              { label: "다운로드", href: "#downloads" },
-              { label: "FAQ", href: "#faq" },
-            ]}
-          />
-          <FooterCol
-            title="플랫폼"
-            links={[
-              { label: "Chrome 확장", href: "#downloads" },
-              { label: "macOS", href: "#downloads" },
-              { label: "iOS", href: "#downloads" },
-            ]}
-          />
-          <FooterCol
-            title="회사"
-            links={[
-              { label: "문의하기", href: "mailto:hello@vocanova.app" },
-              { label: "개인정보처리방침", href: "#" },
-              { label: "이용약관", href: "#" },
-            ]}
-          />
+          <div className="grid grid-cols-3 gap-4 sm:gap-6 md:col-span-7 md:gap-8">
+            <FooterCol
+              title="제품"
+              links={[
+                { label: "기능", href: "#features" },
+                { label: "사용 방법", href: "#how" },
+                { label: "다운로드", href: "#downloads" },
+                { label: "FAQ", href: "#faq" },
+              ]}
+            />
+            <FooterCol
+              title="플랫폼"
+              links={[
+                { label: "Chrome 확장", href: "#downloads" },
+                { label: "macOS", href: "#downloads" },
+                { label: "iOS", href: "#downloads" },
+              ]}
+            />
+            <FooterCol
+              title="회사"
+              links={[
+                { label: "문의하기", href: "mailto:hello@vocanova.app" },
+                { label: "개인정보처리방침", href: "#" },
+                { label: "이용약관", href: "#" },
+              ]}
+            />
+          </div>
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-ink-100 pt-6 text-xs text-ink-500 md:flex-row">
@@ -60,7 +62,7 @@ function FooterCol({
   links: { label: string; href: string }[];
 }) {
   return (
-    <div className="md:col-span-2">
+    <div>
       <h4 className="text-xs font-bold uppercase tracking-wider text-ink-500">
         {title}
       </h4>

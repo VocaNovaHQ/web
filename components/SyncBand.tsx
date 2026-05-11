@@ -2,7 +2,7 @@ export function SyncBand() {
   return (
     <section className="section relative overflow-hidden">
       <div className="container-x">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-ink-900 via-ink-800 to-blue-900 p-10 text-white md:p-16">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-ink-900 via-ink-800 to-blue-900 p-7 text-white sm:p-10 md:p-16">
           <div
             className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-blue-500/30 blur-3xl"
             aria-hidden
@@ -68,7 +68,7 @@ function SyncDiagram() {
   return (
     <div className="relative mx-auto aspect-[5/4] w-full max-w-md">
       {/* center cloud */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-white/95 px-6 py-5 text-center shadow-glow">
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-white/95 px-5 py-4 text-center shadow-glow sm:px-6 sm:py-5">
         <div className="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-400 to-blue-600 text-white">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
             <path
@@ -82,9 +82,13 @@ function SyncDiagram() {
       </div>
 
       {/* nodes */}
-      <DiagramNode label="Chrome" sub="확장 프로그램" pos="top-2 left-2" />
-      <DiagramNode label="macOS" sub="메뉴바 앱" pos="top-2 right-2" />
-      <DiagramNode label="iOS" sub="학습 앱" pos="bottom-2 left-1/2 -translate-x-1/2" />
+      <DiagramNode label="Chrome" sub="확장 프로그램" pos="top-3 left-3 sm:top-2 sm:left-2" />
+      <DiagramNode label="macOS" sub="메뉴바 앱" pos="top-3 right-3 sm:top-2 sm:right-2" />
+      <DiagramNode
+        label="iOS"
+        sub="학습 앱"
+        pos="bottom-3 left-1/2 -translate-x-1/2 sm:bottom-2"
+      />
 
       {/* connectors */}
       <svg

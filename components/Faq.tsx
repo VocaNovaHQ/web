@@ -48,7 +48,7 @@ export function Faq() {
                 <span className="text-[15px] font-semibold text-ink-900 md:text-base">
                   {f.q}
                 </span>
-                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-pill bg-ink-50 text-ink-600 transition group-open:rotate-180 group-open:bg-chip group-open:text-blue-700">
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-pill bg-ink-50 text-ink-600 transition group-open:rotate-180 group-open:bg-chip group-open:text-blue-700 md:h-7 md:w-7">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
                     <path
                       d="M6 9l6 6 6-6"

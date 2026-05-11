@@ -137,11 +137,13 @@ function Feature({
 }) {
   return (
     <div className="card p-6">
-      <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-chip text-blue-700">
-        {icon}
+      <div className="flex items-center gap-3">
+        <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-chip text-blue-700">
+          {icon}
+        </div>
+        <h3 className="text-lg font-bold text-ink-900">{title}</h3>
       </div>
-      <h3 className="mt-4 text-lg font-bold text-ink-900">{title}</h3>
-      <p className="mt-2 text-[15px] leading-relaxed text-ink-600">{body}</p>
+      <p className="mt-3 text-[15px] leading-relaxed text-ink-600">{body}</p>
     </div>
   );
 }

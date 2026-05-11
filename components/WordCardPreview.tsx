@@ -10,10 +10,10 @@ export function WordCardPreview() {
       </div>
 
       {/* Main card */}
-      <div className="relative rounded-[24px] bg-white p-6 shadow-ring animate-floaty md:p-7">
+      <div className="relative rounded-[24px] bg-white p-5 shadow-ring animate-floaty sm:p-6 md:p-7">
         {/* header */}
         <div className="flex items-start justify-between gap-4">
-          <div className="text-[34px] font-extrabold leading-none tracking-tight text-ink-900">
+          <div className="text-[28px] font-extrabold leading-none tracking-tight text-ink-900 sm:text-[34px]">
             superior
           </div>
           <button
@@ -52,16 +52,18 @@ export function WordCardPreview() {
           </Definition>
         </ol>
 
-        {/* noun */}
-        <PosBadge>명사</PosBadge>
-        <ol className="mt-3 space-y-4">
-          <Definition n={3} text="윗사람, 선배, 상급자, 상관" antonym="inferior">
-            <Example
-              en={["your social ", { hl: "superiors" }]}
-              ko="사회생활에서의 윗사람들[선배들]"
-            />
-          </Definition>
-        </ol>
+        {/* noun — desktop/tablet only to keep mobile card compact */}
+        <div className="hidden md:block">
+          <PosBadge>명사</PosBadge>
+          <ol className="mt-3 space-y-4">
+            <Definition n={3} text="윗사람, 선배, 상급자, 상관" antonym="inferior">
+              <Example
+                en={["your social ", { hl: "superiors" }]}
+                ko="사회생활에서의 윗사람들[선배들]"
+              />
+            </Definition>
+          </ol>
+        </div>
       </div>
 
       {/* Backdrop card stack */}

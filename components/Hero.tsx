@@ -6,7 +6,7 @@ export function Hero() {
       <div className="absolute inset-0 -z-10 bg-grid" aria-hidden />
       <div className="absolute inset-0 -z-10 bg-noise" aria-hidden />
 
-      <div className="container-x relative pt-20 pb-24 md:pt-28 md:pb-32">
+      <div className="container-x relative pt-6 pb-16 md:pt-28 md:pb-32">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-7">
             <div className="animate-fadeUp">
@@ -17,7 +17,7 @@ export function Hero() {
             </div>
 
             <h1
-              className="mt-6 text-[40px] font-extrabold leading-[1.08] tracking-tight text-ink-900 md:text-[64px] animate-fadeUp"
+              className="mt-6 text-[32px] font-extrabold leading-[1.08] tracking-tight text-ink-900 sm:text-[40px] md:text-[64px] animate-fadeUp"
               style={{ animationDelay: "60ms" }}
             >
               영어 단어,
@@ -56,7 +56,7 @@ export function Hero() {
             </div>
 
             <div
-              className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-ink-500 animate-fadeUp"
+              className="mt-10 flex flex-col gap-2 text-sm text-ink-500 animate-fadeUp md:flex-row md:flex-wrap md:items-center md:gap-x-6 md:gap-y-3"
               style={{ animationDelay: "240ms" }}
             >
               <Stat label="플랫폼" value="3개" />
