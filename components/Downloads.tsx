@@ -9,6 +9,7 @@ type Platform = {
   bullets: string[];
   icon: React.ReactNode;
   gradient: string;
+  qrSrc?: string;
 };
 
 const platforms: Platform[] = [
@@ -61,6 +62,7 @@ const platforms: Platform[] = [
     ],
     gradient: "from-emerald-400 via-blue-500 to-blue-600",
     icon: <AppleIcon />,
+    qrSrc: "/qr/ios.svg",
   },
   {
     key: "android",
@@ -115,63 +117,93 @@ export function Downloads() {
 }
 
 function DownloadCard({ platform }: { platform: Platform }) {
+  const hasQr = !!platform.qrSrc;
   return (
-    <article className="card relative overflow-hidden p-7">
+    <article className="card group relative overflow-hidden p-7">
       <div
         className={`absolute -right-10 -top-10 h-40 w-40 rounded-full bg-gradient-to-br ${platform.gradient} opacity-20 blur-2xl`}
         aria-hidden
       />
       <div className="relative">
-        <div className="flex items-center justify-between">
+        <div className="relative">
           <div
-            className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br ${platform.gradient} text-white shadow-glow`}
+            className={
+              hasQr
+                ? "transition-opacity duration-300 lg:group-hover:opacity-0"
+                : ""
+            }
           >
-            {platform.icon}
-          </div>
-          <span
-            className={`rounded-pill px-2.5 py-1 text-[11px] font-semibold ${
-              platform.available
-                ? "bg-emerald-50 text-emerald-700"
-                : "bg-ink-100 text-ink-600"
-            }`}
-          >
-            {platform.available ? "다운로드 가능" : "Coming soon"}
-          </span>
-        </div>
-
-        <div className="mt-5 text-[13px] font-semibold tracking-wide text-blue-700">
-          {platform.badge}
-        </div>
-        <h3 className="mt-1 text-xl font-bold text-ink-900">{platform.name}</h3>
-        <p className="mt-4 text-[15px] leading-relaxed text-ink-600">
-          {platform.description}
-        </p>
-
-        <ul className="mt-5 space-y-2">
-          {platform.bullets.map((b) => (
-            <li
-              key={b}
-              className="flex items-center gap-2 text-[14px] text-ink-700"
-            >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                aria-hidden
+            <div className="flex items-center justify-between">
+              <div
+                className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br ${platform.gradient} text-white shadow-glow`}
               >
-                <path
-                  d="M5 12l4 4L19 6"
-                  stroke="#10B981"
-                  strokeWidth="2.4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              {b}
-            </li>
-          ))}
-        </ul>
+                {platform.icon}
+              </div>
+              <span
+                className={`rounded-pill px-2.5 py-1 text-[11px] font-semibold ${
+                  platform.available
+                    ? "bg-emerald-50 text-emerald-700"
+                    : "bg-ink-100 text-ink-600"
+                }`}
+              >
+                {platform.available ? "다운로드 가능" : "Coming soon"}
+              </span>
+            </div>
+
+            <div className="mt-5 text-[13px] font-semibold tracking-wide text-blue-700">
+              {platform.badge}
+            </div>
+            <h3 className="mt-1 text-xl font-bold text-ink-900">
+              {platform.name}
+            </h3>
+            <p className="mt-4 text-[15px] leading-relaxed text-ink-600">
+              {platform.description}
+            </p>
+
+            <ul className="mt-5 space-y-2">
+              {platform.bullets.map((b) => (
+                <li
+                  key={b}
+                  className="flex items-center gap-2 text-[14px] text-ink-700"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden
+                  >
+                    <path
+                      d="M5 12l4 4L19 6"
+                      stroke="#10B981"
+                      strokeWidth="2.4"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  {b}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {hasQr && (
+            <div
+              className="pointer-events-none absolute inset-0 hidden flex-col items-center justify-center bg-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 lg:flex"
+              aria-hidden
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={platform.qrSrc}
+                alt=""
+                className="h-36 w-36"
+              />
+              <div className="mt-2 text-[12px] font-semibold text-ink-700">
+                iPhone으로 스캔
+              </div>
+            </div>
+          )}
+        </div>
 
         <div className="mt-7">
           {platform.available && platform.href ? (
