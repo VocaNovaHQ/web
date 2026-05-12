@@ -51,8 +51,9 @@ const platforms: Platform[] = [
     description:
       "저장된 단어를 SM-2 간격 반복으로 복습. 플래시카드, 발음 재생, 학습 통계를 한 화면에서.",
     badge: "App Store",
-    available: false,
-    cta: "스토어 심사 중",
+    available: true,
+    href: "https://apps.apple.com/kr/app/vocanova/id6766165302",
+    cta: "App Store",
     bullets: [
       "스마트 복습 (SRS)",
       "플래시카드 + 음성 재생",
