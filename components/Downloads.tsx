@@ -35,13 +35,14 @@ const platforms: Platform[] = [
     name: "macOS",
     description:
       "메뉴바에 상주하며 ⌘⇧F 단축키로 어디서나 선택한 단어를 검색합니다. 사파리, PDF, 슬랙 어디서든.",
-    badge: "macOS 14+",
-    available: false,
-    cta: "스토어 심사 중",
+    badge: "macOS 14+ · DMG",
+    available: true,
+    href: "https://github.com/VocaNovaHQ/macos/releases/download/v1.0.0/VocaNova-1.0.0.dmg",
+    cta: "다운로드 (dmg)",
     bullets: [
       "시스템 전역 단축키 ⌘⇧F",
       "메뉴바 상주, Dock 미점유",
-      "Apple Silicon 네이티브",
+      "Universial dmg",
     ],
     gradient: "from-ink-700 via-ink-800 to-ink-900",
     icon: <AppleIcon />,
@@ -193,11 +194,7 @@ function DownloadCard({ platform }: { platform: Platform }) {
               aria-hidden
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={platform.qrSrc}
-                alt=""
-                className="h-36 w-36"
-              />
+              <img src={platform.qrSrc} alt="" className="h-36 w-36" />
               <div className="mt-2 text-[12px] font-semibold text-ink-700">
                 iPhone으로 스캔
               </div>
